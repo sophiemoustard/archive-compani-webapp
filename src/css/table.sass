@@ -1,0 +1,267 @@
+.q-table
+  &__container
+    background-color: inherit
+  & tbody
+    & td
+      font-size: 13px
+      white-space: normal
+      padding: 4px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        padding: 4px 2px
+      .q-icon
+        margin: 0 5px
+        cursor: pointer
+        font-size: 21px
+      &:after
+        background: inherit
+    & tr
+      &.selected
+        background: white
+        & td:after
+          content: none
+
+  & th
+    white-space: normal
+    vertical-align: middle
+    padding: 4px
+    @media screen and (max-width: 767px)
+      font-size: 13px
+      padding: 4px 2px
+  &__bottom
+    padding: 4px
+    & .q-select
+      & .q-field__control
+        font-size: 12px
+
+  .q-item__section--avatar
+    .avatar
+      width: 38px
+      height: 38px
+  .q-item
+    padding: 2px
+    min-height: auto
+  .q-uploader
+    width: auto
+    .q-uploader__list
+      display: none
+    .q-uploader__header
+      background-color: transparent
+    .q-uploader__header:before
+      opacity: 0
+    .q-uploader__header-content
+      margin: 0
+      padding: 0
+      .col
+        margin: 0
+      .q-btn
+        margin: 0
+        padding: 0
+      .q-uploader__subtitle
+        display: none
+      .q-icon
+        margin: 0
+        color: $primary
+      .q-spinner
+        color: $primary
+  tr:hover
+    .q-uploader__header
+      background: rgba(0,0,0,0.07)
+
+  .thirdPartyPayer, .email
+    word-break: break-all
+
+.table-grid
+  table
+    border: 0
+
+    thead
+      border: none
+      clip: rect(0 0 0 0)
+      height: 1px
+      margin: -1px
+      overflow: hidden
+      padding: 0
+      position: absolute
+      width: 1px
+
+    tr
+      border: 1px solid #ddd
+      padding: .35em
+      border-bottom: 2px solid #ddd
+      display: block
+      margin-bottom: .625em
+
+    td
+      border-bottom: 1px solid #ddd
+      display: block
+      text-align: right
+      white-space: initial
+      height: auto
+      min-height: 32px
+      padding: 8px 8px
+
+      &::before
+        content: attr(data-label)
+        float: left
+
+      &:first-child
+        width: 100%
+
+      &:last-child
+        border-bottom: 0
+
+.table-actions
+  min-width: 20px
+  &-responsive
+    @media screen and (min-width: 767px)
+      width: 75px
+
+.table-responsive
+  table
+    table-layout: fixed
+
+    th
+      white-space: normal
+      padding: 10px 20px
+      vertical-align: middle
+
+    tr
+      @media screen and (max-width: 767px)
+        height: auto !important
+
+    td
+      padding: 4px 20px
+
+      .datetime
+        margin: 0
+        .q-field-bottom
+          display: none
+        .q-field-content
+          @media screen and (max-width: 767px)
+            padding-left: 10px
+
+      .q-uploader .q-if-inner
+        display: none
+
+      .q-uploader input
+        cursor: pointer !important
+
+      .q-uploader-pick-button
+        color: $primary
+        font-size: 1.5rem
+        cursor: pointer !important
+
+  @media screen and (min-width: 768px)
+    .q-table__middle
+      margin: 0 10px
+
+    .q-table__bottom
+      margin: 0 10px
+      padding: 0
+
+  @media screen and (max-width: 767px)
+    table
+      border: 0
+
+      thead
+        display: none
+
+      tr
+        border: 1px solid #ddd
+        padding: .35em
+        border-bottom: 2px solid #ddd
+        display: block
+        margin: .625em
+
+      td
+        border-bottom: 1px solid #ddd
+        display: block
+        text-align: right
+        white-space: initial
+        height: auto
+        padding: 8px 8px
+        min-height: 32px
+
+        &::before
+          content: attr(data-label)
+          float: left
+          position: relative
+
+        &:last-child
+          border-bottom: 0
+
+        & .table-actions
+          justify-content: flex-end !important
+
+.table-list
+  margin-bottom: 25px
+  .q-table
+    border-spacing: 0 12px
+    border-collapse: separate
+  th
+    padding: 0px 12px
+  tbody
+    tr
+      background: white
+      &:hover
+        background: white
+      .avatar
+        border: 1px solid $copper-grey-400
+        width: 30px
+        height: 30px
+      &:not(.q-tr--no-hover)
+        &:hover
+          cursor: pointer
+          background: white !important
+          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2)
+          border: 1px solid $copper-grey-300
+    td
+      font-weight: 400
+      border: none
+      padding: 8px 12px
+      .q-item
+        min-height: 0
+        padding: 0
+      .q-item__section--main
+        font-size: 16px
+
+.table-spinner-container
+  height: fit-content
+  .q-inner-loading
+    margin: 10px
+    justify-content: flex-start
+    height: fit-content
+    background: unset
+    transition: none
+
+.loading-container
+  height: 50px
+
+.expanding-table
+  &-expanded-row
+    display: flex
+    justify-content: space-between
+  &-sub-progress
+    min-width: 100px
+    width: 10%
+  &-progress-container
+    max-width: 230px
+    width: 25%
+
+.client-header
+  thead tr th
+    background-color: $copper-grey-100
+
+.vendor-header
+  thead tr th
+    background-color: $peach-100
+
+.sticky-header
+  max-height: 85vh
+
+  thead tr th
+    position: sticky
+    z-index: 1
+  thead tr:first-child th
+    top: 0

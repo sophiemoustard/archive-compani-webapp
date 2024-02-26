@@ -1,0 +1,49 @@
+.chip-container
+  @media screen and (min-width: 550px)
+    position: relative
+    display: flex
+    .q-chip
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  .q-chip
+    background-color: $copper-grey-50
+    border: 1px solid $copper-grey-300
+    color: $copper-grey-700
+    width: 100%
+    padding: 0 8px
+    justify-content: flex-end
+    margin: 0
+    @media screen and (max-width: 767px)
+      font-size: 10px
+      padding: 0 0 0 4px
+    @media screen and (max-width: 549px)
+      font-size: 9px
+      padding: 0 2px
+      min-width: fit-content
+    &.high-occupation
+      background-color: $orange-300
+      color: $orange-900
+      border: 1px solid $orange-300
+    &.extreme-occupation
+      border: 1px solid $red
+      background: $red
+      color: $copper-grey-50
+    &__content
+      display: flex
+      justify-content: flex-end
+
+  .avatar
+    z-index: 2
+    box-shadow: none
+    border: 1px solid $copper-grey-300
+    @media screen and (min-width: $breakpoint-md-min)
+      width: 2.5rem
+      height: 2.5rem
+    @media screen and (max-width: $breakpoint-sm-max)
+      width: 2rem
+      height: 2rem
+    @media screen and (max-width: 767px)
+      width: 1.5rem
+      height: 1.5rem

@@ -1,0 +1,51 @@
+.modal
+  &-container-md
+    background-color: white
+    @media screen and (max-width: 767px)
+      min-width: 65vw
+    @media screen and (min-width: 768px)
+      width: 45vw
+  &-container-sm
+    background-color: white
+    min-width: 30vw
+    @media screen and (min-width: 768px)
+      max-width: 50vw
+  &-padding
+    @media screen and (min-width: 768px)
+      padding: 24px 25px 0px 25px
+    @media screen and (max-width: 767px)
+      padding: 15px 15px 0 15px
+    & .q-btn-toggle
+      margin-bottom: 20px
+  &-title
+    font-size: 24px
+
+  &-btn
+    border-radius: 0
+    height: 45px
+    padding: 0px 25px
+    .q-btn-inner
+      justify-content: left
+      font-size: 18px
+      justify-content: space-between
+      div
+        flex-grow: 1
+        text-align: left
+
+  &-btn-close
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+
+.q-dialog
+  .full-height
+    .q-card__section
+      padding-left: 0px !important
+
+.q-field
+  .q-field__inner
+    .q-field__control
+      .q-field__control-container
+        overflow: hidden
+        flex-wrap: nowrap

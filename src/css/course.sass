@@ -1,0 +1,39 @@
+.filters-container
+  grid-auto-rows: 1fr
+  grid-auto-flow: row
+  display: grid
+  grid-gap: 0px 10px
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  @media screen and (max-width: 767px)
+    width: 100%
+
+.reset-filters
+  color: $primary
+  text-decoration: underline
+  font-size: 12px
+  padding-bottom: 20px
+  display: flex
+  flex: 1
+  align-items: flex-end
+  cursor: pointer
+  @media screen and (max-width: 767px)
+    justify-content: flex-end
+
+.course-card
+  & .q-card__section
+    height: fit-content
+  & .q-card__section--vert
+    padding: 10px
+  & .q-item__section--side
+    padding: 0px
+    margin-right: 5px
+  & .q-item
+    padding: 0px
+    min-height: auto
+    margin-right: 10px
+  & .additional-infos
+    color: $primary
+    font-size: 12px
+    align-items: flex-end
+  & .to-plan
+    color: $secondary
